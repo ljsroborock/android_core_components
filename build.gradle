@@ -1,17 +1,20 @@
 apply plugin: "com.android.library"
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
     }
 }
 
 dependencies {
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
     implementation "org.ros.rosjava_core:rosjava:0.3.6"
     implementation 'org.ros.rosjava_core:rosjava_geometry:0.3.6'
     implementation 'org.ros.rosjava_bootstrap:message_generation:0.3.3'
@@ -22,8 +25,6 @@ dependencies {
     implementation 'org.ros.rosjava_messages:geometry_msgs:1.12.7'
     implementation 'org.ros.rosjava_messages:nav_msgs:1.12.7'
     implementation 'org.ros.rosjava_messages:tf2_msgs:0.5.20'
-    implementation "com.android.support:appcompat-v7:28.0.0"
-    implementation 'com.android.support:support-v4:28.0.0'
     implementation 'com.google.guava:guava:28.0-android'
 
     implementation ('org.apache.commons:com.springsource.org.apache.commons.logging:1.1.1') {
